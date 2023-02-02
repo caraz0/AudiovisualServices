@@ -1,0 +1,11 @@
+Modificamos el fichero hosts en el servidor DNS y añadimos las direcciones ip de los servidores rtsp 1 y 2
+10.0.4.10 rtsp-server-1
+10.0.5.10 rtsp-server-2
+Con este fichero cambiado, ejecutamos la linea de comandos del fichero de aula global 
+/usr/sbin/dnsmasq -C /etc/dnsmasq.d/dnsmasq.conf para lanzar el servidor haciendo previamente un 
+killall dnsmasq 
+
+A partir de aqui, en el terminal del cliente modificamos el resolv que esta en /etc/ y añadimos la direccion ip
+nameserver 10.0.0.10.
+Entonces al hacer el nslookup en este terminal y buscar ambos servidores, este nos responde con las direcciones ip
+de cada servidor rtsp

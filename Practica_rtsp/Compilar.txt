@@ -1,0 +1,18 @@
+Compilar
+/usr/dist/jdk1.8.0_141/bin/javac -cp `echo vlcj-3.10.1/*.jar | tr ' ' ':'` *.java
+
+
+Cliente ejecutar
+/usr/dist/jdk1.8.0_141/bin/java -cp .:`echo vlcj-3.10.1/*.jar | tr ' ' ':'` Client 10.0.0.20
+Servidor ejecutar
+/usr/dist/jdk1.8.0_141/bin/java -cp .:`echo vlcj-3.10.1/*.jar | tr ' ' ':'` Server 5004
+
+Hay que poner si o si el puerto 5004
+rtsp://127.0.0.1:5004/movie.mp4
+
+cd /home/labsma/Downloads/Practica
+
+
+ Cambiar usuario
+ export DISPLAY=:0
+ su labsma
